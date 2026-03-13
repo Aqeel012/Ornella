@@ -134,6 +134,20 @@ export default function BlogDetailPage() {
             {/* Content */}
             <div className="mb-16 max-w-none blog-content">
               <style dangerouslySetInnerHTML={{__html: `
+                .blog-content h1 {
+                  font-size: 2.25rem;
+                  font-weight: 700;
+                  margin-top: 2rem;
+                  margin-bottom: 1.5rem;
+                  line-height: 1.2;
+                }
+                .blog-content h2 {
+                  font-size: 1.875rem;
+                  font-weight: 700;
+                  margin-top: 2rem;
+                  margin-bottom: 1.25rem;
+                  line-height: 1.3;
+                }
                 .blog-content h3 {
                   font-size: 1.5rem;
                   font-weight: 700;
@@ -141,10 +155,53 @@ export default function BlogDetailPage() {
                   margin-bottom: 1rem;
                   line-height: 1.3;
                 }
+                .blog-content h4 {
+                  font-size: 1.25rem;
+                  font-weight: 600;
+                  margin-top: 1.5rem;
+                  margin-bottom: 0.75rem;
+                  line-height: 1.4;
+                }
+                .blog-content h5 {
+                  font-size: 1.125rem;
+                  font-weight: 600;
+                  margin-top: 1.5rem;
+                  margin-bottom: 0.5rem;
+                  line-height: 1.4;
+                }
+                .blog-content h6 {
+                  font-size: 1rem;
+                  font-weight: 600;
+                  margin-top: 1.5rem;
+                  margin-bottom: 0.5rem;
+                  line-height: 1.4;
+                }
                 .blog-content p {
                   font-size: 1.125rem;
                   line-height: 1.75rem;
                   margin-bottom: 1.5rem;
+                }
+                .blog-content ul, .blog-content ol {
+                  font-size: 1.125rem;
+                  line-height: 1.75rem;
+                  margin-bottom: 1.5rem;
+                  padding-left: 2rem;
+                }
+                .blog-content ul {
+                  list-style-type: disc;
+                }
+                .blog-content ol {
+                  list-style-type: decimal;
+                }
+                .blog-content li {
+                  margin-bottom: 0.5rem;
+                }
+                .blog-content blockquote {
+                  border-left: 4px solid #e5e7eb;
+                  padding-left: 1.5rem;
+                  margin: 1.5rem 0;
+                  font-style: italic;
+                  color: #6b7280;
                 }
                 .blog-content hr {
                   margin-top: 2rem;
@@ -152,8 +209,61 @@ export default function BlogDetailPage() {
                   border: none;
                   border-top: 1px solid rgba(0, 0, 0, 0.1);
                 }
-                .blog-content strong {
+                .blog-content strong, .blog-content b {
                   font-weight: 700;
+                }
+                .blog-content em, .blog-content i {
+                  font-style: italic;
+                }
+                .blog-content u {
+                  text-decoration: underline;
+                }
+                .blog-content a {
+                  color: #2563eb;
+                  text-decoration: underline;
+                }
+                .blog-content a:hover {
+                  color: #1d4ed8;
+                }
+                .blog-content code {
+                  background-color: #f3f4f6;
+                  padding: 0.2rem 0.4rem;
+                  border-radius: 0.25rem;
+                  font-family: monospace;
+                  font-size: 0.875em;
+                }
+                .blog-content pre {
+                  background-color: #1f2937;
+                  color: #f9fafb;
+                  padding: 1rem;
+                  border-radius: 0.5rem;
+                  overflow-x: auto;
+                  margin-bottom: 1.5rem;
+                }
+                .blog-content pre code {
+                  background-color: transparent;
+                  padding: 0;
+                  color: inherit;
+                }
+                .blog-content img {
+                  max-width: 100%;
+                  height: auto;
+                  border-radius: 0.5rem;
+                  margin: 1.5rem 0;
+                }
+                .blog-content table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  margin: 1.5rem 0;
+                }
+                .blog-content th, .blog-content td {
+                  border: 1px solid #e5e7eb;
+                  padding: 0.75rem;
+                  text-align: left;
+                }
+                .blog-content th {
+                  background-color: #f3f4f6;
+                  font-weight: 600;
                 }
               `}} />
               <div dangerouslySetInnerHTML={{ __html: blog.content }} />
